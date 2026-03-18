@@ -1,5 +1,5 @@
 import '@/styles/globals.css';
-import { Metadata, Viewport } from 'next';
+import { Metadata } from 'next';
 import { Link } from '@heroui/link';
 import clsx from 'clsx';
 
@@ -20,13 +20,6 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -44,7 +37,7 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <Providers themeProps={{ attribute: 'class', defaultTheme: 'dark' }}>
+        <Providers themeProps={{ attribute: 'class' }}>
           <div className='relative flex flex-col min-h-screen'>
             <Navbar />
             <main className='container mx-auto max-w-full flex-grow'>
@@ -69,7 +62,7 @@ export default function RootLayout({
                       <li>
                         <a
                           className='hover:text-white transition-colors'
-                          href='#inicio'
+                          href='#home'
                         >
                           Inicio
                         </a>
@@ -85,7 +78,7 @@ export default function RootLayout({
                       <li>
                         <a
                           className='hover:text-white transition-colors'
-                          href='#areas'
+                          href='#areas-practica'
                         >
                           Áreas
                         </a>
