@@ -1,6 +1,4 @@
 'use client';
-
-import React from 'react';
 import { ScrollShadow } from '@heroui/react';
 
 const ShadowScrollComponent = ({ children }: { children: React.ReactNode }) => {

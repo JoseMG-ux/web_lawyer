@@ -1,8 +1,7 @@
+import clsx from 'clsx';
 import { Link } from '@heroui/link';
 import { button as buttonStyles } from '@heroui/theme';
-
 import { siteConfig } from '@/config/site';
-import clsx from 'clsx';
 
 const Inicio = () => {
   return (
@@ -39,23 +38,6 @@ const Inicio = () => {
             Consultar Ahora
           </Link>
         </div>
-        {/* 
-        <div className='max-w-4xl text-center space-y-8'>
-          <h2 className='text-white text-5xl md:text-7xl font-extrabold leading-tight tracking-tight'>
-            Excelencia Legal <br />
-            <span className='text-slate-300'>a su Alcance</span>
-          </h2>
-          <p className='text-slate-200 text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed'>
-            Servicios legales profesionales con un enfoque en la integridad, la
-            confianza y la experiencia para resolver sus asuntos jurídicos con
-            la mayor diligencia.
-          </p>
-          <div className='pt-4'>
-            <button className='bg-white text-black px-10 py-4 rounded-xl text-base font-bold hover:bg-slate-100 transition-all shadow-xl'>
-              Consultar Ahora
-            </button>
-          </div>
-        </div> */}
       </section>
     </>
   );

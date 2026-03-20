@@ -2,11 +2,10 @@
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
-  NavbarMenu,
   NavbarBrand,
   NavbarItem,
-  NavbarMenuItem,
 } from '@heroui/navbar';
+
 import { button as buttonStyles } from '@heroui/theme';
 import { Link } from '@heroui/link';
 import { link as linkStyles } from '@heroui/theme';
@@ -70,7 +69,6 @@ export const Navbar = () => {
           </div>
           <div className=''>
             <Link
-              isExternal
               className={clsx(
                 buttonStyles({
                   variant: 'solid',
@@ -79,7 +77,7 @@ export const Navbar = () => {
                 }),
                 'bg-black text-white font-bold',
               )}
-              href={siteConfig.links.github}
+              href={'#contacto'}
             >
               Consultar Ahora
             </Link>
@@ -87,7 +85,7 @@ export const Navbar = () => {
         </div>
       </NavbarContent>
 
-      <NavbarMenu>
+      {/* <NavbarMenu>
         <div className='mx-4 mt-2 flex flex-col gap-2'>
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
@@ -107,7 +105,7 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
         </div>
-      </NavbarMenu>
+      </NavbarMenu> */}
     </HeroUINavbar>
   );
 };

@@ -1,5 +1,4 @@
 'use client';
-
 import { Card, CardBody, CardHeader } from '@heroui/react';
 
 const CardComponent = ({

@@ -1,4 +1,3 @@
-import React from 'react';
 import FormContact from '@/components/contacto/components/ContactForm';
 import { MailIcon, PhoneIcon, UbicationIcon } from '@/components/icons';
 import CardComponent from '@/components/ui/CardComponent';

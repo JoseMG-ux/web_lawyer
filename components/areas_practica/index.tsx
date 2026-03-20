@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { subtitle, title } from '@/components/primitives';
+import { subtitle } from '@/components/primitives';
 import { Divider } from '@heroui/react';
 import {
   BusinessIcon,
@@ -107,4 +107,3 @@ const AreasPractica = () => {
 };
 
 export default AreasPractica;
-//scale-110 transition-transform'
