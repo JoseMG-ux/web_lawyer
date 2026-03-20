@@ -1,6 +1,7 @@
 'use client';
-import React from 'react';
 import { Button, Input, Textarea, Form } from '@heroui/react';
+import { addToast } from '@heroui/toast';
+
 import clsx from 'clsx';
 import { button as buttonStyles } from '@heroui/theme';
 import { useFormik } from 'formik';
@@ -19,18 +20,25 @@ const ContactForm = () => {
     initialValues: {
       name: '',
       email: '',
+      subject: 'DEMANDA',
       message: '',
     },
     validationSchema,
-    onSubmit: async (values: EmailRequest, { resetForm, setStatus }) => {
+    onSubmit: async (values: EmailRequest, { resetForm }) => {
       try {
-        setStatus('loading');
-        await sendContactEmail(values);
-        setStatus('success');
+        const response = await sendContactEmail(values);
+
+        if (response.status === 200) {
+          addToast({
+            title: '¡Exitoso!',
+            description: 'El correo fue enviado exitosamente.',
+            variant: 'bordered',
+            color: 'foreground',
+          });
+        }
         resetForm();
       } catch (error) {
         console.error(error);
-        setStatus('error');
       }
     },
   });
@@ -39,11 +47,11 @@ const ContactForm = () => {
     <Form
       className='w-auto justify-center items-center space-y-4'
       validationErrors={formik.errors}
-      //onReset={() => setSubmitted(null)}
       onSubmit={formik.handleSubmit}
     >
-      <div className='w-full py-4 flex flex-col gap-4 max-w-md'>
+      <div className='w-full py-12 flex flex-col gap-8 max-w-md'>
         <Input
+          isRequired
           label='Nombre completo'
           labelPlacement='outside'
           id='name'
@@ -67,6 +75,7 @@ const ContactForm = () => {
         />
 
         <Textarea
+          isRequired
           className='col-span-12 md:col-span-6 mb-6 md:mb-0'
           label='Mensaje'
           labelPlacement='outside'
@@ -83,11 +92,10 @@ const ContactForm = () => {
             disabled={formik.status === 'loading' || formik.isSubmitting}
             className={clsx(
               buttonStyles({
-                variant: 'shadow',
                 radius: 'md',
                 size: 'lg',
               }),
-              'bg-[#ffffff] w-full font-bold hover:text-white hover:bg-black',
+              'bg-black text-white w-full font-bold hover:text-black hover:bg-white hover:shadow-xl',
             )}
             type='submit'
           >
