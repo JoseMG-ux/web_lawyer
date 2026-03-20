@@ -26,14 +26,14 @@ const Contacto = () => {
                 <div className='flex items-center gap-2'>
                   <MailIcon />
                   <p className='text-slate-600 text-md leading-relaxed justify-between'>
-                    daniellaschultz671@gmail.com
+                    correo@gmail.com
                   </p>
                 </div>
 
                 <div className='flex items-center gap-2'>
                   <PhoneIcon />
                   <p className='text-slate-600 dark:text-slate-400 text-md leading-relaxed'>
-                    +57 323 9122571
+                    +57 000 0000000
                   </p>
                 </div>
 
