@@ -106,16 +106,16 @@ export default function RootLayout({
                   </div>
                 </div>
                 <div className='py-8 mt-8 border-t border-white/10 text-center text-slate-500 text-sm'>
-                  <p>© 2026 Nombre Abogados. Todos los derechos reservados.</p>
+                  <p>© 2026 (Nombre). Todos los derechos reservados.</p>
                 </div>
                 <Link
                   isExternal
                   className='flex items-center justify-center gap-1 text-current py-4'
-                  href='https://heroui.com?utm_source=next-app-template'
-                  title='heroui.com homepage'
+                  href='https://github.com/JoseMG-ux'
+                  title='GitHub'
                 >
-                  <span className='text-default-600'>Creado por</span>
-                  <p className='text-primary'>JoseMorenoGomez</p>
+                  <span className='text-default-600'>Desarrollado por</span>
+                  <p className='text-default'>JoseMorenoGomez</p>
                 </Link>
               </div>
             </footer>
