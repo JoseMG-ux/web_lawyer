@@ -33,7 +33,7 @@ const PreguntasFrecuentes = () => {
         <h2 className='text-4xl font-bold text-black'>Preguntas frecuentes</h2>
       </div>
       <div className='gap-4 max-w-7xl px-4 sm:px-6 lg:px-8 '>
-        <div className='grid grid-cols-1 gap-4 '>
+        <div className='grid grid-cols-1 gap-4'>
           {frecuentlyQuestion.map((item) => (
             <CardComponent
               key={item.id}
