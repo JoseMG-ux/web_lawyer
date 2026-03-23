@@ -30,7 +30,12 @@ export default function RootLayout({
       suppressHydrationWarning
       lang='en'
     >
-      <head />
+      <head>
+        <meta
+          name='description'
+          content='Despacho de abogados en Barranquilla especializado en derecho civil, penal y laboral. Consulta gratuita. Más de 10 años de experiencia.'
+        />
+      </head>
       <body
         className={clsx(
           'min-h-screen text-foreground bg-background font-sans antialiased',
@@ -48,7 +53,9 @@ export default function RootLayout({
                 <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
                   <div className='col-span-2 space-y-6'>
                     <div className='flex items-center gap-3'>
-                      <h2 className='text-2xl font-bold text-white'>Nombre</h2>
+                      <h2 className='text-2xl font-bold text-white'>
+                        Schulz & Erasmo Abogados
+                      </h2>
                     </div>
                     <p className='text-slate-400 max-w-sm'>
                       Excelencia legal y ética profesional dedicada a proteger
