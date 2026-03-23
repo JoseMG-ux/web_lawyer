@@ -45,7 +45,9 @@ export const Navbar = () => {
             href='/'
           >
             <LogoIcon />
-            <p className='font-extrabold text-inherit'>DANIELLA</p>
+            <p className='font-extrabold text-inherit'>
+              Schulz & Erasmo Abogados
+            </p>
           </NextLink>
         </NavbarBrand>
 
