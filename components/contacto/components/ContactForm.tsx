@@ -12,6 +12,7 @@ import * as yup from 'yup';
 const validationSchema = yup.object({
   name: yup.string().required('El nombre es requerido'),
   email: yup.string().required('El correo es requerido'),
+  subject: yup.string().required('El asunto es requerido'),
   message: yup.string().required('El mensaje es requerido'),
 });
 
@@ -20,7 +21,7 @@ const ContactForm = () => {
     initialValues: {
       name: '',
       email: '',
-      subject: 'DEMANDA',
+      subject: '',
       message: '',
     },
     validationSchema,
@@ -72,6 +73,18 @@ const ContactForm = () => {
           type='email'
           isInvalid={Boolean(formik.touched.email && formik.errors.email)}
           errorMessage={formik.touched.email && formik.errors.email}
+        />
+
+        <Input
+          isRequired
+          label='Asunto'
+          labelPlacement='outside'
+          id='subject'
+          {...formik.getFieldProps('subject')}
+          placeholder='Introduce asunto'
+          type='text'
+          isInvalid={Boolean(formik.touched.subject && formik.errors.subject)}
+          errorMessage={formik.touched.subject && formik.errors.subject}
         />
 
         <Textarea
