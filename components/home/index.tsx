@@ -15,7 +15,7 @@ const Inicio = () => {
         </span> */}
         <div className='relative z-10 max-w-4xl text-center space-y-4'>
           <span className='block text-lg md:text-xl font-light tracking-[0.2em] uppercase text-slate-300 mb-4'>
-            Schulz &amp; Erasmo Abogados
+            NOMBRE{/* Schulz &amp; Erasmo Abogados */}
           </span>
           <h2 className='text-white text-5xl md:text-7xl font-extrabold leading-tight tracking-tight'>
             Excelencia Legal <br />

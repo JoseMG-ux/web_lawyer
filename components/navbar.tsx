@@ -46,7 +46,7 @@ export const Navbar = () => {
           >
             <LogoIcon />
             <p className='font-extrabold text-inherit'>
-              Schulz & Erasmo Abogados
+              NOMBRE{/* Schulz & Erasmo Abogados */}
             </p>
           </NextLink>
         </NavbarBrand>

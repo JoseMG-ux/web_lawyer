@@ -54,7 +54,7 @@ export default function RootLayout({
                   <div className='col-span-2 space-y-6'>
                     <div className='flex items-center gap-3'>
                       <h2 className='text-2xl font-bold text-white'>
-                        Schulz & Erasmo Abogados
+                        NOMBRE{/* Schulz & Erasmo Abogados */}
                       </h2>
                     </div>
                     <p className='text-slate-400 max-w-sm'>
